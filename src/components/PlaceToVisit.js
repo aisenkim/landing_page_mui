@@ -16,7 +16,7 @@ export const PlaceToVisit = () => {
   const classes = useStyles();
   const checked = useWindowPosition("header"); // using custom hook created
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="place-to-visit">
       <ImageCard checked={checked} />
       <ImageCard checked={checked} />
     </div>

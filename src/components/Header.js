@@ -8,6 +8,7 @@ import {
 import React, { useState, useEffect } from "react";
 import SortIcon from "@material-ui/icons/Sort";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { Link as Scroll } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,7 +62,7 @@ export default function Header() {
           <h1 className={classes.appbarTitle}>
             Coin <span className={classes.colorText}>Prices</span>
           </h1>
-          <IconButton>
+          <IconButton disabled>
             <SortIcon className={classes.icon} />
           </IconButton>
         </Toolbar>
@@ -74,12 +75,14 @@ export default function Header() {
       >
         <div className={classes.container}>
           <h1 className={classes.title}>
-            Welcome to <br /> My Coin{" "}
+            Welcome to <br /> Coin{" "}
             <span className={classes.colorText}>Prices</span>
           </h1>
-          <IconButton>
-            <ExpandMoreIcon className={classes.goDown} />
-          </IconButton>
+          <Scroll to="place-to-visit" smooth={true}>
+            <IconButton>
+              <ExpandMoreIcon className={classes.goDown} />
+            </IconButton>
+          </Scroll>
         </div>
       </Collapse>
     </div>
